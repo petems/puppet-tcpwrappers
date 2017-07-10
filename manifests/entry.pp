@@ -12,8 +12,6 @@ define tcpwrappers::entry (
   $except = undef
 ) {
 
-  include '::tcpwrappers'
-
   case $type {
     'allow','deny': {}
     default: { fail("Invalid type: ${type}") }
